@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: random-giphy-ingress
+  labels:
+    run: random-giphy
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - host: giphy.jpunter.co.uk
+      http:
+        paths:
+          - backend:
+              service:
+                name: random-giphy-svc
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
