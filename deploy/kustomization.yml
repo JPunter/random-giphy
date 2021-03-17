@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - manifest.yml
   - ingress.yml
+namespace: giphy
 images:
   - name: registry.digitalocean.com/jpunter/random-giphy
     newTag: test
