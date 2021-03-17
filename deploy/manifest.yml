@@ -57,7 +57,7 @@ spec:
             successThreshold: 1
             failureThreshold: 3
       imagePullSecrets:
-        - name: regcred
+        - name: jpunter
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
