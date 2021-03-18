@@ -1,5 +1,5 @@
 FROM nginx:1.19-alpine
-RUN apk update && apk install curl && apk clean
+RUN apk update && apk add curl
 COPY . /usr/share/nginx/html
 ADD startup.sh . 
 RUN chmod +x startup.sh
