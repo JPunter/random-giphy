@@ -4,7 +4,7 @@ resources:
   - manifest.yml
   - ingress.yml
   - namespace.yml
-namespace: random-giphy
+namespace: random-giphy-dev
 images:
   - name: registry.digitalocean.com/jpunter/random-giphy
     newTag: latest
