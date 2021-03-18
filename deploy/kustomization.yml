@@ -7,4 +7,4 @@ resources:
 namespace: random-giphy
 images:
   - name: registry.digitalocean.com/jpunter/random-giphy
-    newTag: 1d5929c
+    newTag: bb45e0a
