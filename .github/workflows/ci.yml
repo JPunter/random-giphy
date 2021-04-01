@@ -52,7 +52,7 @@ jobs:
       - name: Change Image tag for dev
         run: |
           cd deployment/overlays/dev
-          kustomize edit set image random-giphy=random-giphy:$(echo $GITHUB_SHA | head -c7)
+          kustomize edit set image registry.digitalocean.com/jpunter/random-giphy:$(echo $GITHUB_SHA | head -c7)
 
       - name: Commit and push changes
         run: |
