@@ -53,3 +53,12 @@ jobs:
         run: |
           cd deployment/overlays/dev
           kustomize edit set image random-giphy=random-giphy:$(echo $GITHUB_SHA | head -c7)
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "JPunter"
+          git config --global user.email "jacob.punter@gmail.com"
+
+          git add -A
+          git commit -m "Updated dev image tag"
+          git push
