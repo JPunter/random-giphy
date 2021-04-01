@@ -52,7 +52,7 @@ jobs:
       - name: Change Image tag for dev
         run: |
           cd deployment/overlays/dev
-          kustomize edit set image random-giphy=random-giphy:$(echo $GITHUB_SHA | head -c7)
+          kustomize edit set image registry.digitalocean.com/jpunter/random-giphy:$(echo $GITHUB_SHA | head -c7)
 
       - name: Commit and push changes
         run: |
@@ -84,7 +84,7 @@ jobs:
           git checkout -b new-tag-$(echo $GITHUB_SHA | head -c7)
           git add -A
           git commit -m "Updated prod image tag"
-          git push
+          git push --set-upstream origin new-tag-$(echo $GITHUB_SHA | head -c7)
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
