@@ -9,13 +9,3 @@ metadata:
 spec:
   rules:
     - host: XXX
-      name: random-giphy-ingress
-      http:
-        paths:
-          - backend:
-              service:
-                name: random-giphy-svc
-                port:
-                  number: 80
-            path: /
-            pathType: Prefix

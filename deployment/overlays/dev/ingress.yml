@@ -5,7 +5,6 @@ metadata:
 spec:
   rules:
     - host: giphy.dev.jpunter.co.uk
-      name: random-giphy-ingress
       http:
         paths:
           - backend:
