@@ -12,4 +12,4 @@ patchesStrategicMerge:
 
 images:
 - name: registry.digitalocean.com/jpunter/random-giphy
-  newTag: cd613f1
+  newTag: 41e5061
