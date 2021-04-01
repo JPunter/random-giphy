@@ -84,7 +84,7 @@ jobs:
           git checkout -b new-tag-$(echo $GITHUB_SHA | head -c7)
           git add -A
           git commit -m "Updated prod image tag"
-          git push
+          git push --set-upstream origin new-tag-$(echo $GITHUB_SHA | head -c7)
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
