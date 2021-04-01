@@ -11,5 +11,8 @@ patchesStrategicMerge:
 - ingress.yml
 
 images:
+- name: random-giphy
+  newName: random-giphy
+  newTag: 8f34dff
 - name: registry.digitalocean.com/jpunter/random-giphy
   newTag: tag1
