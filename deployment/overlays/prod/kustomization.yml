@@ -4,12 +4,12 @@ kind: Kustomization
 namespace: random-giphy
 
 resources:
-  - ../../base
-  - namespace.yml
+- ../../base
+- namespace.yml
 
 patchesStrategicMerge:
-  - ingress.yml
+- ingress.yml
 
 images:
-  - name: registry.digitalocean.com/jpunter/random-giphy
-    newTag: 61ded58
+- name: registry.digitalocean.com/jpunter/random-giphy
+  newTag: dd4636a
